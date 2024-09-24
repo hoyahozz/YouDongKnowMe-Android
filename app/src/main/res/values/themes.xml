@@ -26,4 +26,9 @@
         <item name="android:textSize">16dp</item>
         <item name="android:textColor">@color/gray500</item>
     </style>
+
+    <!-- 데이트 픽커 스타일 지정 -->
+    <style name="Theme.YouDongKnowMe.NumberPicker" parent="Theme.YouDongKnowMe">
+        <item name="colorControlNormal">@color/blue200</item>
+    </style>
 </resources>

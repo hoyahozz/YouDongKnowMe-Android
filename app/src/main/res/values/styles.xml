@@ -29,4 +29,12 @@
         <item name="android:fontFamily">@font/pretendard_medium</item>
         <item name="android:textSize">@dimen/font_size_12</item>
     </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetCornerStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetCornerStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_white_radius_20dp</item>
+    </style>
 </resources>

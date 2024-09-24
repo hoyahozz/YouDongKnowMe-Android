@@ -148,4 +148,7 @@
     <string name="dialog_permission_early_content">내용</string>
     <string name="dialog_permission_early_cancel">취소</string>
     <string name="dialog_permission_early_complete">설정 화면 이동</string>
+
+    <!-- datepicker dialog -->
+    <string name="dialog_datepicker_comlete">완료</string>
 </resources>

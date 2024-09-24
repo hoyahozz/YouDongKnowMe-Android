@@ -36,9 +36,14 @@ class ScheduleViewModel(private val scheduleRepository: ScheduleRepository) : Ba
     private val _pickMonth = MutableLiveData<Int>()
     val pickMonth: LiveData<Int> = _pickMonth
 
+    private val _selectedDate = MutableLiveData<CalendarDay>()
+    val selectedDate: LiveData<CalendarDay> = _selectedDate
+
     fun setPickedDate(date: CalendarDay) {
+        _selectedDate.value = date
         _pickYear.value = date.year
         _pickMonth.value = date.month
+        getSchedules()
     }
 
     fun getSchedules() {
@@ -51,7 +56,6 @@ class ScheduleViewModel(private val scheduleRepository: ScheduleRepository) : Ba
                         val scheduleList = result.data
 
                         // 선택한 연월 조건에 따라 리스트 출력
-
                         _scheduleList.postValue(getSchedulesForPickDate(scheduleList))
 
                         scheduleRepository.setLocalSchedules(Gson().toJson(scheduleList))
